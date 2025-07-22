@@ -68,6 +68,7 @@ export default function Home() {
     setTasks([]);
     setInitialLoad(true);
     setPage(1);
+    window.location.reload();
   };
 
   const handlePrevPage = () => {
