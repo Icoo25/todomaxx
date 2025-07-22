@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { User } from '@supabase/supabase-js';
 import Auth from "../components/Auth";
 import AddTask from "../components/AddTask";
 import TaskList from "../components/TaskList";
@@ -15,7 +16,7 @@ interface Task {
 const TASKS_PER_PAGE = 10;
 
 export default function Home() {
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(false);
   const [initialLoad, setInitialLoad] = useState(true);

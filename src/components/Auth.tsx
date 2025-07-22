@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import supabase from '../lib/supabase'
+import { User } from '@supabase/supabase-js';
 
 interface AuthProps {
-  setUser: (user: any) => void
+  setUser: (user: User | null) => void
 }
 
 export default function Auth({ setUser }: AuthProps) {
